@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiff Cruz Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .header-nav a {
+            margin: 0 15px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .image-wrapper {
+            margin: 10px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <header class="flex justify-between p-6 header-nav">
+        <div></div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Work</a>
+            <a href="#">About</a>
+            <a href="#">Resume</a>
+        </nav>
+    </header>
+    <main class="content">
+        <section class="flex flex-col items-center py-20">
+            <p class="text-lg">I am</p>
+            <h1 class="text-7xl font-playfair">Tiff Cruz</h1>
+            <p class="text-lg">an interaction designer.<br>a design thinker.</p>
+            <div class="images mt-10">
+                <img src="https://placehold.co/100x100" alt="Yellow spiky shape" class="image-wrapper">
+                <img src="https://placehold.co/100x100" alt="Pink flower shape" class="image-wrapper">
+                <img src="https://placehold.co/100x100" alt="Star shape" class="image-wrapper">
+                <img src="https://placehold.co/100x100" alt="Eyes" class="image-wrapper">
+                <img src="https://placehold.co/100x100" alt="Yes or Yes" class="image-wrapper">
+            </div>
+        </section>
+        <section class="py-20">
+            <h2 class="text-6xl font-playfair">Work</h2>
+            <p class="mt-4">Can't Choose What Work?<br>Pick a Card Instead!</p>
+            <div class="flex justify-center mt-10">
+                <div class="p-4">
+                    <img src="https://placehold.co/200x350" alt="Work card 1">
+                    <p class="mt-4">Strat Design</p>
+                </div>
+                <div class="p-4">
+                    <img src="https://placehold.co/200x350" alt="Work card 2">
+                    <p class="mt-4">CAC</p>
+                </div>
+                <div class="p-4">
+                    <img src="https://placehold.co/200x350" alt="Work card 3">
+                    <p class="mt-4">Givelify</p>
+                </div>
+            </div>
+        </section>
+        <section class="footer py-10">
+            <a href="#">Book</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </section>
+    </main>
+</body>
+</html>
