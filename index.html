@@ -1,83 +1,111 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FUNNYCOM</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8"> <!-- 문서의 문자 인코딩을 UTF-8로 설정 -->
+    <title>Quick Order Form</title> <!-- 문서 제목 설정 -->
+    <link rel="stylesheet" href="styles.css"> <!-- 외부 CSS 파일 연결 -->
 </head>
 <body>
-  <div id="container">
-    <header>
-      <!-- 이름을 가장 위쪽에 -->
-      <h1>Jung Yerin</h1>
-      <h2>Student & Data Analyst</h2>
-    </header>
-    <!-- 내용 -->
-    <main>
-      <!-- 화면을 좌우로 나눔 -->
-      <article id="left">
-        <div id="pf-img">
-          <img src="./pf.png" alt="프로필 이미지">
-        </div>
+    <div class="container"> <!-- 컨테이너 디브로 전체 폼을 감싸는 역할 -->
+        <form id="orderForm"> <!-- 폼 시작, 폼의 아이디는 orderForm -->
+            <!-- 이름 입력 필드 -->
+            <label for="name">Name</label> <!-- 이름 입력 필드를 위한 레이블 -->
+            <input type="text" id="name" name="name"> <!-- 텍스트 입력 필드, 아이디와 이름은 name -->
 
-        <!-- 자기 소개 -->
-        <section>
-          <!-- 소개 내용은 <p>와 </p> 사이의 부분을 수정하세요 -->
-          <p>휴학하며 샌드박스 네트워크에서 인턴 생활을 하고 있습니다.</p>
+            <!-- 아이디 입력 필드 -->
+            <label for="username">Username</label> <!-- 아이디 입력 필드를 위한 레이블 -->
+            <input type="text" id="username" name="username"> <!-- 텍스트 입력 필드, 아이디와 이름은 username -->
 
-          <!-- sns 링크 부분 -->
-          <!-- href="" 부분의 링크와 내용을 수정하세요 -->
-          <ul id="sns">
-            <li>
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <a href="dpfls7582@gmail.com">dpfls7582@gmail.com</a>              
-        </li>
-            <li>
-              <i class="fab fa-github" aria-hidden="true"></i>
-              <a href="https://github.com/yerinsally">yerinsally</a>              
-            </li>
-            <li>
-              <i class="fab fa-linkedin" aria-hidden="true"></i>
-              <a href="https://linkedin.com/linkedin-username">linkedin-username</a>
-            </li>
-            </ul>
-        </section>
-      </article>
+            <!-- 이메일 입력 필드 -->
+            <label for="email">Email</label> <!-- 이메일 입력 필드를 위한 레이블 -->
+            <input type="email" id="email" name="email"> <!-- 이메일 입력 필드, 아이디와 이름은 email -->
 
-      <artile id="right">
-        <section>
-          <h2>경력(work)</h2>
-          <!-- 경력 내용 수정 -->
-            <dl>
-              <dt>회사 A : 2018 ~ 2020</dt>
-              <dd>회사에서 맡았던 업무</dd>
-              <dd>기타 사항</dd>
-            </dl>
-            <dl>
-              <dt>회사 B : 2020 ~ 2022</dt>
-              <dd>회사에서 맡았던 업무</dd>              
-            </dl>  
-        </section>
-        <section>
-          <h2>다룰 수 있는 기술(skills)</h2>
-          <!-- 자신있는 기술 수정 -->
-          <p>HTML/CSS</p>
-          <p>Javascritpt</p>
-          <p>React</p>
-          <p>Github</p>
-        </section>
-        <section>
-          <h2>학력(education)</h2>
-          <!-- 학력 수정 -->
-          <p>2018.02 - XX 대학교 졸업(전공: 컴퓨터공학)</p>
-          <p>2012.02 - XX 고등학교 졸업</p>
-          <p> ... </p>
-        </section>
-      </artile>
-    </main>
-  </div>
+            <!-- 연락처 입력 필드 -->
+            <label for="contact">Contact Number</label> <!-- 연락처 입력 필드를 위한 레이블 -->
+            <input type="text" id="contact" name="contact"> <!-- 텍스트 입력 필드, 아이디와 이름은 contact -->
+
+            <!-- 패스워드 입력 필드 -->
+            <label for="password">Password</label> <!-- 패스워드 입력 필드를 위한 레이블 -->
+            <input type="password" id="password" name="password"> <!-- 패스워드 입력 필드, 아이디와 이름은 password -->
+
+            <!-- 패스워드 확인 입력 필드 -->
+            <label for="confirm_password">Confirm Password</label> <!-- 패스워드 확인 입력 필드를 위한 레이블 -->
+            <input type="password" id="confirm_password" name="confirm_password"> <!-- 패스워드 확인 입력 필드, 아이디와 이름은 confirm_password -->
+
+            <!-- 제품 유형 선택 필드셋 -->
+            <fieldset id="product_type">
+                <legend>Product Type</legend> <!-- 필드셋 제목 -->
+                <div class="grid-container">
+                    <!-- 각 제품 유형 선택 항목 -->
+                    <div>
+                        <input type="radio" id="starter" name="product_type" value="Starter">
+                        <label for="starter">Starter</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="professional" name="product_type" value="Professional">
+                        <label for="professional">Professional</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="enterprise" name="product_type" value="Enterprise">
+                        <label for="enterprise">Enterprise</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="student" name="product_type" value="Student">
+                        <label for="student">Student</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- 주문 수량 선택 필드셋 -->
+            <fieldset id="order_quantity">
+                <legend>Order Quantity</legend> <!-- 필드셋 제목 -->
+                <div class="quantity-container">
+                    <!-- 수량 선택 드롭다운과 직접 입력 필드 -->
+                    <select id="quantity_select" name="quantity_select">
+                        <option value="" selected disabled>Select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <input type="number" id="quantity_input" name="quantity_input" min="10" placeholder="10+">
+                </div>
+                <!-- 안내 문구 -->
+                <p>10개 이상 주문 시 직접 수량을 입력 후 제출해주시면 영업팀이 빠른 시일 내에 연락 드리겠습니다.</p>
+            </fieldset>
+
+            <!-- 약관 동의 필드셋 -->
+            <fieldset id="terms_agreement">
+                <legend>Terms of Agreement</legend> <!-- 필드셋 제목 -->
+                <div class="terms-container">
+                    <!-- 각 약관 동의 항목 -->
+                    <div>
+                        <input type="checkbox" id="privacy_agreement" name="terms_agreement" value="privacy">
+                        <label for="privacy_agreement"><a href="https://www.google.com" target="_blank">개인정보 수집및 이용 동의(필수)</a></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="service_agreement" name="terms_agreement" value="service">
+                        <label for="service_agreement"><a href="https://www.google.com" target="_blank">서비스 이용 약관 동의(필수)</a></label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="email_agreement" name="terms_agreement" value="email">
+                        <label for="email_agreement"><a href="https://www.google.com" target="_blank">E-mail 광고성 정보 수신 동의(선택)</a></label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- 버튼 컨테이너 -->
+            <div class="button-container">
+                <a href="https://www.google.com" target="_blank" class="button">Edition Detail</a> <!-- Edition Detail 링크 버튼 -->
+                <input type="submit" value="Submit"> <!-- 제출 버튼 -->
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script> <!-- 외부 자바스크립트 파일 연결 -->
 </body>
 </html>

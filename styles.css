@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif; /* 기본 폰트 설정 */
+    background-color: #f4f4f4; /* 배경색 설정 */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    height: 100vh; /* 화면 높이 전체 */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    background-color: #fFF; /* 배경색 설정 */
+    padding: 20px;
+    border: 15px solid #000; /* 검은색 테두리 */
+    border-radius: 80px; /* 테두리 반경 */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* 그림자 효과 */
+    width: 90%;
+    max-width: 600px; /* 최대 너비 */
+    margin: auto; /* 자동 여백 */
+    height: auto;
+}
+
+form {
+    margin: 0;
+}
+
+label {
+    display: block; /* 블록 요소로 설정 */
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: Monaco, Consolas, 'Courier New', monospace; /* 폰트 설정 */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+input[type="password"],
+textarea,
+select {
+    width: 100%; /* 너비 100% */
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #000; /* 검은색 테두리 */
+    border-radius: 4px; /* 테두리 반경 */
+    font-family: Monaco, Consolas, 'Courier New', monospace; /* 폰트 설정 */
+}
+
+input[type="submit"],
+a.button {
+    background-color: #fff; /* 버튼 배경색 */
+    color: #000; /* 버튼 텍스트 색 */
+    border: 2px solid #000; /* 버튼 테두리 */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none; /* 링크 장식 제거 */
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer; /* 마우스 커서 변경 */
+    border-radius: 4px; /* 테두리 반경 */
+    width: 100%; /* 너비 100% */
+}
+
+textarea {
+    height: 80px;
+    resize: vertical; /* 수직 크기 조정 가능 */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2열 그리드 */
+    gap: 10px; /* 그리드 간격 */
+}
+
+.quantity-container {
+    display: flex;
+    justify-content: space-between; /* 양쪽 정렬 */
+    gap: 10px; /* 요소 간격 */
+}
+
+.quantity-container select,
+.quantity-container input[type="number"] {
+    flex: 1; /* 요소 확장 */
+}
+
+.terms-container {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    gap: 10px; /* 요소 간격 */
+}
+
+.grid-container div,
+.terms-container div {
+    display: flex;
+    align-items: center; /* 수직 중앙 정렬 */
+}
+
+.grid-container div label,
+.terms-container div label {
+    margin-left: 10px; /* 좌측 여백 */
+}
+
+.button-container {
+    display: flex;
+    color: #000;
+    justify-content: space-between; /* 양쪽 정렬 */
+    gap: 10px; /* 요소 간격 */
+}
+
+p {
+    margin-top: 10px;
+    text-align: center; /* 중앙 정렬 */
+    font-family: Monaco, Consolas, 'Courier New', monospace; /* 폰트 설정 */
+    font-size: 12px; /* 폰트 크기 */
+    color: #333; /* 텍스트 색상 */
+}
