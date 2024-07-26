@@ -1,138 +1,191 @@
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nanum-gothic-regular {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body {
-  font-size: 14px;
-  background: darkblue url('./bg.jpg') no-repeat fixed;
-  background-size: cover;
+    font-family: "Nanum Gothic", sans-serif;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    height: 100vh; /* 화면 높이 전체 */
 }
 
-#container {  
-  max-width: 960px;
-  margin: 20px auto;
-  padding: 2em;
-  border: 1px solid #ccc;
-  background-color: rgba(255,255,255,0.8);
+.container {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    background-color: #C3DBFF; /* 배경색 설정 */
+    padding: 30px;
+    border: 15px solid #000; /* 검은색 테두리 */
+    border-radius: 80px; /* 테두리 반경 */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* 그림자 효과 */
+    width: 90%;
+    max-width: 600px; /* 최대 너비 */
+    margin: auto; /* 자동 여백 */
+    height: auto;
 }
 
-/* 헤더 부분 */
-header {
-  text-align: center;
-  margin: auto 2em;
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-header h1 {
-  margin: 1.2em auto;
-  font-family: 'Courgette', cursive;
-  text-transform: uppercase;
-  font-size: 3em;
-  letter-spacing: 0.6em;
-  font-weight: 700;
+.desc-label {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 10px;
+    font-weight: normal;
 }
 
-header h2 {
-  font-size: 1.2em;
-  font-style: italic;
-}
-/* 내용 부분 */
-main {
-  display: grid;
-  grid-template-columns: 30% 70%;
-  margin-top: 3em;
+.form-group {
+    margin-bottom: 20px; /* 입력란 사이의 빈칸을 더 넓혀줌 */
 }
 
-section {
-  margin: auto 1em 4em 2em;
-
+label {
+    font-weight: bold;
+    margin-bottom: 5px; /* 라벨과 입력란 사이의 간격을 넓혀줌 */
 }
 
-/* 왼쪽, 프로필 이미지 부분 */
-
-#pf-img {
-  text-align: center;
-  margin-bottom: 2em;
-}
-#pf-img img {
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  box-shadow: 5px 5px #eee;
-}
-
-/* 왼쪽, 자기 소개 부분 */
-#sns {
-  margin-top: 3em;
-  list-style: none;
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+textarea,
+select,
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 10px;
+    margin-bottom: 15px; /* 각 입력란의 하단 여백 추가 */
 }
 
-#sns li {
-  margin-top:1em;
-  margin-left: -3em;
+textarea {
+    resize: vertical;
+    text-align: center;
 }
 
-i {
-  margin-left: 3em;
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+    text-align: center;
 }
 
-#left p {
-  line-height: 1.2;
+.btn {
+    display: inline-block;
+    background-color: #FFE7C3;
+    color:  #555;
+    padding: auto;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width:100%;
+    height: 40px;
 }
 
-/* 오른쪽, 경력 부분 */
-#right h2 {
-  text-transform: capitalize;
-  font-size: 1.5em;
-  margin: 2em auto 2em -1.5em;
+.btn:hover {
+    background-color: #ccc;
 }
 
-#right p {
-  line-height: 2.2;
+.form-group-horizontal {
+    display: flex;
+    flex-direction: column;
 }
 
-dt {
-  font-weight: bold;
-  margin:1em auto;
-}
-dd {
-  margin-left: 1.5em;
+.form-group-horizontal label {
+    margin-right: 10px;
+    text-align: center;
 }
 
-#base {
-  width:100%;
-  background-color: #ddd;
-}
-.text {
-  text-align: right;
-  padding-top:0.8em;
-  padding-bottom: 0.8em;
-  padding-right: 0.8em;
-  color:white;
-}
-.htmlcss {
-  width:90%;
-  background-color: #777;
-}
-.js {
-  width:80%;
-  background-color: #777;
-}
-.react {
-  width:80%;
-  background-color: #777;
-}
-.github {
-  width:90%;
-  background-color: #777;
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* 자식 요소를 수평 방향으로 가운데 정렬 */
+    text-align: center;
+    gap: 10px; /* 요소 간격 */
+    font-size: 15px;
 }
 
-#left {
-  padding-right: 2em;
-  border-right: 1px solid lightgray;
+/* 스타일 추가 - fieldset 스타일 */
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px; /* padding 조정 */
+    margin-bottom: 20px; /* fieldset과 다른 요소들 사이의 공백 추가 */
+    text-align: center;
 }
-#right {
-  padding-left: 2em;
+
+legend {
+    font-size: 10px; /* legend의 글씨 크기 */
+    font-weight: bold;
+    margin-bottom: 10px; /* legend와 내용 사이의 공백 */
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* 열 너비를 줄임 */
+    gap: 5px; /* 그리드 항목 간격 줄임 */
+    text-align: center;
+}
+
+.quantity-container {
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    gap: 10px; /* 간격 조정 */
+    text-align: center;
+    width: auto;
+}
+
+.quantity-container select,
+.quantity-container input[type="number"] {
+    flex: none; /* 크기를 자동으로 조정하지 않음 */
+    width: 120px; /* 너비 설정 */
+    text-align: center;
+}
+
+
+/* 스타일 추가 - 약관 동의 부분 */
+.inline {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.inline label {
+    margin-left: 5px;
+    text-align: center;
+}
+
+/* 폰트 크기 및 여백 설정 */
+label, input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="password"], textarea, select, input[type="date"] {
+    font-size: 15px; /* 폰트 크기 설정 */
+}
+
+.desc-label, fieldset legend {
+    font-size: 16px; /* desc-label 및 fieldset legend 폰트 크기 설정 */
+    text-align: center;
+}
+
+.text_10 {
+    text-align: center;
+    font-size: 14px;
 }
