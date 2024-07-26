@@ -87,7 +87,9 @@ input[type="checkbox"] {
 }
 
 .btn {
-    display: inline-block;
+    display: flex; /* 추가 */
+    justify-content: center; /* 추가 */
+    align-items: center; /* 추가 */
     background-color: #FFE7C3;
     color:  #555;
     padding: auto;
@@ -124,7 +126,7 @@ input[type="checkbox"] {
 
 /* 스타일 추가 - fieldset 스타일 */
 fieldset {
-    border: 1px solid #ccc;
+    border: 1px solid #000;
     border-radius: 4px;
     padding: 10px; /* padding 조정 */
     margin-bottom: 20px; /* fieldset과 다른 요소들 사이의 공백 추가 */
@@ -181,7 +183,7 @@ label, input[type="text"], input[type="email"], input[type="tel"], input[type="n
 }
 
 .desc-label, fieldset legend {
-    font-size: 16px; /* desc-label 및 fieldset legend 폰트 크기 설정 */
+    font-size: 15px; /* desc-label 및 fieldset legend 폰트 크기 설정 */
     text-align: center;
 }
 
